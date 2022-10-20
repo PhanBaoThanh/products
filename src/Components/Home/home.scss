@@ -1,0 +1,63 @@
+@use '../../responsive.scss' as *;
+.container{
+    .header{
+        margin-bottom: 48px;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    
+        h2{
+          width: max-content;
+          font-weight: 500;
+          .line{
+            height: 4px;
+            margin-top: 4px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #645cff;
+          }
+        }
+    }
+
+    .products{
+        padding: 0 16px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        .product{
+            cursor: pointer;
+          width: calc(100%/3);
+          @include mobile{
+            width: 100%;
+          }
+          padding: 0 8px;
+          margin-bottom: 32px;
+          text-align: center;
+          text-decoration: none;
+          .img{
+            img{
+              width: 100%;
+              height: 200px;
+              border-radius: 4px;
+              object-fit: cover;
+              margin-bottom: 6px;
+            }
+          }
+    
+          .productName{
+    
+            color: #64748b;
+            margin-bottom: 4px;
+          }
+    
+          .productCost{
+            font-weight: 600;
+            color: #000;
+          }
+        }
+      }
+}

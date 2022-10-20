@@ -1,0 +1,108 @@
+@use '../../responsive.scss' as *;
+.containerProduct{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px;
+    .btnBack{
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #645cff;
+        box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        transition: .2s;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-bottom: 36px;
+
+        &:hover{
+            background-color: #3c3799;
+            box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    }
+    .content{
+        padding: 60px 0;
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+        }
+        .img{
+            width: 45%;
+            margin-right: 5%;
+            @include mobile{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+                border-radius: 4px;
+                object-fit: cover;
+                max-height: 500px;
+            }
+        }
+
+        .text{
+            @include mobile{
+                width: 100%;
+            }
+            width: 50%;
+
+            .headerText{
+                font-size: 32px;
+                font-weight: 400;
+                text-align: left;
+                letter-spacing: 2px;
+                margin-bottom: 8px;
+            }
+
+            .type{
+                margin-bottom: 8px;
+                color: #64748b;
+                font-size: 20px;
+            }
+
+            .cost{
+                margin-bottom: 8px;
+            }
+
+            .colors{
+                display: flex;
+                .color{
+                    border-radius: 50%;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .description{
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: .5;
+                margin-bottom: 16px;
+            }
+
+            .textBtn{
+                display: inline-block;
+                padding: 4px 16px;
+                background-color: #645cff;
+                box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+                color: #fff;
+                transition: .2s;
+                border-radius: 4px;
+                text-decoration: none;
+                cursor: pointer;
+                outline: none;
+                border: none;
+
+                &:hover{
+                    background-color: #3c3799;
+                    box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+}
