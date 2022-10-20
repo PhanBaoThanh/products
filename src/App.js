@@ -130,6 +130,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home data={data} />}/>
+        <Route path='/products' element={<Home data={data} />}/>
         <Route path='/:productId' element={<Product data={data} />} />
       </Routes>
     </Router>
